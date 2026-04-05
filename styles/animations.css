@@ -1,0 +1,135 @@
+/* ═══════════════════════════════════════════════════════════
+   PRAXYA — Animations (Light Theme)
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Hero Entrance ── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-anim {
+  opacity: 0;
+  animation-name: fadeInUp;
+  animation-duration: 700ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  animation-fill-mode: forwards;
+}
+
+.hero-anim-0 { animation-delay: 0ms; }
+.hero-anim-1 { animation-delay: 120ms; }
+.hero-anim-2 { animation-delay: 240ms; }
+.hero-anim-3 { animation-delay: 360ms; }
+.hero-anim-4 { animation-delay: 480ms; }
+.hero-anim-5 { animation-delay: 600ms; }
+
+/* ── Dashboard Float ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.float-anim {
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 700ms;
+}
+
+/* ── Pulse (for dots, badges) ── */
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.pulse-dot {
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+.pulse-dot-0 { animation-delay: 0ms; }
+.pulse-dot-1 { animation-delay: 200ms; }
+.pulse-dot-2 { animation-delay: 400ms; }
+.pulse-dot-3 { animation-delay: 600ms; }
+.pulse-dot-4 { animation-delay: 800ms; }
+.pulse-dot-5 { animation-delay: 1000ms; }
+
+/* ── Progress Bar ── */
+@keyframes progressFill {
+  from { width: 0%; }
+  to { width: 94%; }
+}
+
+.progress-fill {
+  animation: progressFill 1.5s ease-out forwards;
+  animation-delay: 800ms;
+  width: 0%;
+}
+
+/* ── Nav Scroll ── */
+.nav-scrolled {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom-color: var(--color-divider) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* ── Mobile Menu ── */
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.menu-open {
+  animation: slideDown 300ms ease forwards;
+}
+
+/* ── Reveal Stagger ── */
+.reveal-stagger-0 { transition-delay: 0ms; }
+.reveal-stagger-1 { transition-delay: 80ms; }
+.reveal-stagger-2 { transition-delay: 160ms; }
+.reveal-stagger-3 { transition-delay: 240ms; }
+.reveal-stagger-4 { transition-delay: 320ms; }
+.reveal-stagger-5 { transition-delay: 400ms; }
+.reveal-stagger-6 { transition-delay: 480ms; }
+.reveal-stagger-7 { transition-delay: 560ms; }
+.reveal-stagger-8 { transition-delay: 640ms; }
+
+/* ── Form Steps ── */
+@keyframes formStepIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.form-step-enter {
+  animation: formStepIn 300ms ease forwards;
+}
+
+@keyframes successPop {
+  0% { transform: scale(0.8); opacity: 0; }
+  60% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.success-anim {
+  animation: successPop 500ms ease forwards;
+}
+
+/* ── Counter Animation ── */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.count-anim {
+  animation: countUp 600ms ease forwards;
+}
+
+/* ── Urgency Dot ── */
+.urgency-dot {
+  animation: pulse 2s ease-in-out infinite;
+}
