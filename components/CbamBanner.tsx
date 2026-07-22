@@ -83,7 +83,7 @@ export default function CbamBanner() {
             letterSpacing: '-0.02em',
           }}>
             The EU carbon border tax is coming.<br />
-            <span style={{ color: '#22C55E' }}>Indian chemical exporters aren't ready.</span>
+            <span style={{ color: '#22C55E' }}>We help Indian chemical exporters get ready.</span>
           </h2>
 
           <p style={{
@@ -252,8 +252,10 @@ export default function CbamBanner() {
         {/* ── CTA ── */}
         <div style={{ textAlign: 'center' }}>
           <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)', marginBottom: 20, lineHeight: 1.6 }}>
-            Praxya calculates embedded emissions per product, per process —<br />
-            giving EU importers the verified data they need. No tariff surprises.
+            We calculate embedded emissions per SKU, per process, using
+            plant-level data from your Gujarat facility. Your EU importer gets verified
+            numbers. You avoid default tariff rates. Free initial assessment for CBAM-exposed
+            companies.
           </p>
           <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href="#contact" style={{
@@ -268,7 +270,7 @@ export default function CbamBanner() {
               onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 0 40px rgba(34,197,94,0.5)'; }}
               onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 0 30px rgba(34,197,94,0.3)'; }}
             >
-              Calculate Your CBAM Exposure →
+              Get a Free CBAM Exposure Assessment →
             </a>
             <a href="#capabilities" style={{
               display: 'inline-flex', alignItems: 'center', gap: 8,

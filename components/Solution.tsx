@@ -5,25 +5,25 @@ import { useEffect, useRef } from 'react';
 const STEPS = [
   {
     number: '01',
-    title: 'Upload your plant data',
-    body: "Electricity bills, ETP reports, fuel logs, process PDFs. Praxya's extraction engine reads every format your plant already produces — no reformatting, no templates.",
-    detail: 'Supports PDF, XLSX, CSV, JSON, and scanned documents via OCR',
+    title: 'We collect your data',
+    body: "Our team works directly with your EHS Head — remotely or on-site in Gujarat. We extract consumption data from electricity bills, fuel invoices, ETP records, and process logs. You provide documents. We do the rest.",
+    detail: 'Electricity bills · Fuel invoices · Process flow diagrams · ETP logs · DG set records',
     icon: 'upload',
     color: '#22C55E',
   },
   {
     number: '02',
-    title: 'Chemical-specific calculations',
-    body: 'Process-specific emission factors for Indian chemical manufacturing — starting with Scope 1 GHG. Validated against IPCC 2006 and CEA India grid factors. Not spend-based defaults.',
-    detail: '40+ chemical processes · H₂SO₄ · Chlor-alkali · Nitric acid · Ethylene oxide',
+    title: 'We calculate using chemical-specific factors',
+    body: "Our engineers apply IPCC 2006 process-specific emission factors for your exact chemistry — sulphuric acid, chlor-alkali, nitric acid, dye synthesis. Not spend-based defaults. Not EXIOBASE averages. Your actual process.",
+    detail: 'IPCC 2006 Vol. 3 · CEA India grid 0.716 tCO₂/MWh · EPA AP-42 · CA-validated methodology',
     icon: 'calculate',
     color: '#22C55E',
   },
   {
     number: '03',
-    title: 'Auditor-ready BRSR report',
-    body: 'Every value traced to its source document. Full data lineage your CA can verify independently. SEBI-ready XBRL export and a separate read-only auditor portal.',
-    detail: 'XBRL export · CA portal · Data lineage · Audit trail',
+    title: 'Your CA receives a file-ready report',
+    body: "A BRSR Section C-P9 formatted PDF with full data lineage — every number traced to its source document. Your CA verifies, your CS files. XBRL export included. Delivered in 14 days from data receipt.",
+    detail: 'BRSR PDF · Data lineage footnotes · CA methodology statement · XBRL export · Auditor portal',
     icon: 'report',
     color: '#22C55E',
   },
@@ -88,13 +88,13 @@ export default function Solution() {
             className="heading-section-lg reveal reveal-stagger-1"
             style={{ marginTop: '12px' }}
           >
-            Upload. Calculate. File.
+            We collect. We calculate. You file.
           </h2>
           <p
             className="text-body-lg reveal reveal-stagger-2"
             style={{ marginTop: '12px', maxWidth: '520px' }}
           >
-            Raw plant data in. Auditor-ready BRSR report out. In days, not months.
+            Our team handles every step from data collection to CA-verified report delivery. Your EHS Head spends 2 hours, not 2 months.
           </p>
         </div>
 
@@ -138,10 +138,10 @@ export default function Solution() {
           <div className="comparison-side">
             <span className="comparison-label">Today&rsquo;s Reality</span>
             <div className="comp-items">
-              <CompItem icon="⏱" text="~90 days per filing" muted />
-              <CompItem icon="👥" text="Multiple consultants" muted />
-              <CompItem icon="📋" text="Manual data collection" muted />
-              <CompItem icon="❌" text="Generic emission factors" muted />
+              <CompItem icon="⏱" text="~90 days of manual collection" muted />
+              <CompItem icon="👥" text="Generic emission factors" muted />
+              <CompItem icon="📋" text="No process-specific GHG" muted />
+              <CompItem icon="❌" text="Audit risk on every number" muted />
             </div>
           </div>
           <div className="comparison-divider" />
@@ -150,10 +150,10 @@ export default function Solution() {
               With Praxya
             </span>
             <div className="comp-items">
-              <CompItem icon="⚡" text="Days, not months" />
-              <CompItem icon="🤖" text="Fully automated" />
-              <CompItem icon="✓" text="CA-verified output" />
-              <CompItem icon="🧪" text="Process-specific factors" />
+              <CompItem icon="⚡" text="14-day delivery" />
+              <CompItem icon="🤖" text="We collect, you approve" />
+              <CompItem icon="✓" text="Process-specific factors" />
+              <CompItem icon="🧪" text="CA audit trail on every line" />
             </div>
           </div>
         </div>
@@ -171,7 +171,7 @@ export default function Solution() {
           }}
         >
           <a href="#contact" className="btn-primary">
-            Get in Touch
+            Book Free Assessment
           </a>
           <span
             style={{
@@ -180,7 +180,9 @@ export default function Solution() {
               color: 'var(--color-text-tertiary)',
             }}
           >
-            We&rsquo;ll walk you through with your actual plant data
+            We'll run a free GHG assessment on your last electricity bill.
+            <br />
+            48 hours. No obligation.
           </span>
         </div>
       </div>

@@ -4,33 +4,33 @@ import { useEffect, useRef, useState } from 'react';
 
 const INSIGHTS = [
   {
-    value: '1,000+',
-    label: 'listed companies under BRSR Core mandate',
+    value: '160+',
+    label: 'listed chemical manufacturers under BRSR mandate',
     accent: false,
   },
   {
-    value: '₹160Cr+',
-    label: 'annual compliance spend in Indian specialty chemicals',
+    value: '14',
+    label: 'days from data collection to CA-ready report',
     accent: true,
   },
   {
-    value: '160+',
-    label: 'listed chemical manufacturers filing BRSR',
+    value: '₹1.5L',
+    label: 'full service vs ₹15–30L Big 4 engagement',
     accent: false,
   },
   {
     value: '0',
-    label: 'platforms with India-specific chemical emission factors',
+    label: 'other services with Indian chemical process emission factors',
     accent: true,
   },
 ];
 
 const REGULATORY_FACTS = [
   'BRSR Core is mandatory for top 1,000 listed companies from FY 2024–25',
-  'CBAM definitive pricing begins January 2026 for EU chemical imports',
-  'SEBI requires third-party assurance on BRSR Core KPIs from FY 2024–25',
-  'CEA emission factor for Indian grid: 0.716 tCO₂/MWh (v19, 2023)',
-  'IPCC default for H₂SO₄ contact process: 0.26 tCO₂e per tonne product',
+  'CBAM definitive pricing begins January 2026 — Indian chemical exporters need verified emissions data now',
+  'CEA India grid emission factor: 0.716 tCO₂/MWh (v19, 2023) — most BRSR filings use an outdated figure',
+  'Sulphuric acid contact process: 0.26 tCO₂e/tonne — generic ESG tools overstate this by 50–90%',
+  'Praxya delivers CA-verified BRSR GHG reports in 14 days — pilot engagement from ₹50K',
 ];
 
 export default function InsightsStrip() {

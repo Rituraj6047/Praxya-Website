@@ -9,6 +9,7 @@ interface FormData {
   plantCount: string;
   currentApproach: string;
   exportsToEU: string;
+  filingUrgency: string;
   name: string;
   email: string;
   phone: string;
@@ -22,6 +23,7 @@ const INITIAL: FormData = {
   plantCount: '',
   currentApproach: '',
   exportsToEU: '',
+  filingUrgency: '',
   name: '',
   email: '',
   phone: '',
@@ -64,6 +66,13 @@ const APPROACHES = [
 ];
 
 const EU_OPTIONS = ['Yes — currently exporting', 'No', 'Planning to'];
+
+const FILING_URGENCY = [
+  'Already filed FY 2024-25',
+  'Filing in 1–2 months',
+  'Filing in 3–6 months',
+  'Not started planning yet',
+];
 
 export default function ContactForm() {
   const [step, setStep] = useState(1);
@@ -112,6 +121,7 @@ export default function ContactForm() {
     const e: Partial<Record<keyof FormData, string>> = {};
     if (!data.plantCount) e.plantCount = 'Please select plant count';
     if (!data.currentApproach) e.currentApproach = 'Please select your current approach';
+    if (!data.filingUrgency) e.filingUrgency = 'Please select your filing timeline';
     setErrors(e);
     return Object.keys(e).length === 0;
   };
@@ -122,6 +132,7 @@ export default function ContactForm() {
     if (!data.email.trim()) e.email = 'Work email is required';
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email))
       e.email = 'Please enter a valid work email';
+    if (!data.phone.trim()) e.phone = 'Phone number is required for assessment booking';
     setErrors(e);
     return Object.keys(e).length === 0;
   };
@@ -164,24 +175,22 @@ export default function ContactForm() {
               className="heading-section"
               style={{ marginTop: '16px', maxWidth: '440px' }}
             >
-              Let&rsquo;s assess your
-              <br />
-              BRSR readiness.
+              Get Your Free BRSR GHG Assessment.
             </h2>
             <p
               className="text-body"
               style={{ marginTop: '20px', maxWidth: '400px' }}
             >
-              Share a few details about your operations. We&rsquo;ll come back
-              with a custom assessment of how Praxya fits your compliance
-              workflow — no sales pitch, just clarity.
+              Tell us about your plant. We'll run a free GHG calculation on your
+              last electricity bill and tell you whether your current BRSR figures
+              are accurate — within 48 hours. No sales call unless you want one.
             </p>
 
             <div className="contact-promises">
-              <PromiseItem text="Response within 24 hours" />
-              <PromiseItem text="Custom BRSR gap analysis" />
-              <PromiseItem text="No obligation, no spam" />
-              <PromiseItem text="CBAM exposure estimate if applicable" />
+              <PromiseItem text="Free GHG assessment — 48-hour turnaround" />
+              <PromiseItem text="No obligation, no automatic follow-up" />
+              <PromiseItem text="CBAM exposure estimate if you export to EU" />
+              <PromiseItem text="CA-grade methodology on every calculation" />
             </div>
 
             <div className="contact-trust">
@@ -213,12 +222,12 @@ export default function ContactForm() {
                     marginRight: 'auto',
                   }}
                 >
-                  We&rsquo;ll review your details and reach out to{' '}
+                  We'll WhatsApp{' '}
                   <strong style={{ color: 'var(--color-text-primary)' }}>
-                    {data.email}
-                  </strong>{' '}
-                  within 24 hours with a preliminary BRSR readiness assessment
-                  for {data.company}.
+                    {data.phone}
+                  </strong>
+                  {' '}within 48 hours with your free GHG assessment for {data.company}.
+                  If your figures are off, we'll show you exactly why.
                 </p>
 
                 {data.exportsToEU === 'Yes — currently exporting' && (
@@ -446,6 +455,34 @@ export default function ContactForm() {
                           Relevant for CBAM exposure assessment
                         </span>
                       </div>
+
+                      {/* Filing Urgency */}
+                      <div className="form-group form-full">
+                        <label className="form-label">
+                          When is your next BRSR filing due?
+                          <span className="form-required">*</span>
+                        </label>
+                        <div className="form-radio-group">
+                          {FILING_URGENCY.map((opt) => (
+                            <label
+                              key={opt}
+                              className={`form-radio-option ${data.filingUrgency === opt ? 'selected' : ''}`}
+                            >
+                              <input
+                                type="radio"
+                                name="filingUrgency"
+                                value={opt}
+                                checked={data.filingUrgency === opt}
+                                onChange={() => update('filingUrgency', opt)}
+                              />
+                              {opt}
+                            </label>
+                          ))}
+                        </div>
+                        {errors.filingUrgency && (
+                          <span className="form-error">{errors.filingUrgency}</span>
+                        )}
+                      </div>
                     </div>
 
                     <div className="form-actions">
@@ -499,13 +536,11 @@ export default function ContactForm() {
                         )}
                       </div>
 
-                      {/* Phone — optional */}
+                      {/* Phone */}
                       <div className="form-group form-full">
                         <label className="form-label">
                           Phone / WhatsApp
-                          <span className="form-hint" style={{ marginLeft: '8px', display: 'inline' }}>
-                            (optional)
-                          </span>
+                          <span className="form-required">*</span>
                         </label>
                         <input
                           className="form-input"
@@ -514,6 +549,10 @@ export default function ContactForm() {
                           value={data.phone}
                           onChange={(e) => update('phone', e.target.value)}
                         />
+                        <span className="form-hint">We'll WhatsApp you the assessment — faster than email.</span>
+                        {errors.phone && (
+                          <span className="form-error">{errors.phone}</span>
+                        )}
                       </div>
 
                       {/* Challenge — open ended intelligence */}
@@ -538,7 +577,7 @@ export default function ContactForm() {
                         ← Back
                       </button>
                       <button className="btn-primary" onClick={submit}>
-                        Submit Assessment Request
+                        Book Free Assessment Call
                       </button>
                     </div>
 

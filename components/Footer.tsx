@@ -3,43 +3,41 @@
 
 const footerLinks = [
   {
-    heading: 'Product',
+    heading: 'Services',
     links: [
-      { label: 'BRSR Core Module', href: '#capabilities' },
-      { label: 'CBAM Reporting', href: '#cbam' },
-      { label: 'Emission Factors DB', href: '#solution' },
-      { label: 'Auditor Portal', href: '#capabilities' },
-      { label: 'MSME Supplier Portal', href: '#capabilities' },
-      { label: 'Pricing', href: '#contact' },
+      { label: 'GHG Calculation Service', href: '#deliverables' },
+      { label: 'BRSR Report Delivery (14 days)', href: '#deliverables' },
+      { label: 'CBAM Exposure Assessment', href: '#cbam' },
+      { label: 'CA Partner Programme', href: '#contact' },
+      { label: 'Pilot Engagement — ₹50K', href: '#contact' },
+      { label: 'Full Service — ₹1.5L', href: '#contact' },
     ],
   },
   {
-    heading: 'Solutions',
+    heading: 'Who We Serve',
     links: [
-      { label: 'For Chemical Manufacturers', href: '#problem' },
-      { label: 'For CA / Audit Firms', href: '#contact' },
-      { label: 'For EU Importers', href: '#cbam' },
-      { label: 'CBAM Calculator', href: '#cbam' },
-      { label: 'BRSR Readiness Check', href: '#contact' },
+      { label: 'Specialty Chemical Manufacturers', href: '#solution' },
+      { label: 'Dye & Pigment Companies', href: '#solution' },
+      { label: 'Chlor-Alkali Producers', href: '#solution' },
+      { label: 'Agrochemical Manufacturers', href: '#solution' },
+      { label: 'CA / Audit Firms', href: '#contact' },
     ],
   },
   {
     heading: 'Resources',
     links: [
-      { label: 'BRSR Core Guide', href: '#' },
-      { label: 'CBAM Explainer', href: '#' },
+      { label: 'Download Sample Report', href: '/sample-report.pdf' },
+      { label: 'BRSR Core Compliance Guide', href: '#' },
+      { label: 'CBAM Impact on Indian Exporters', href: '#' },
       { label: 'Emission Factors Library', href: '#' },
       { label: 'SEBI XBRL Format Guide', href: '#' },
-      { label: 'Regulatory Timeline', href: '#' },
-      { label: 'Blog', href: '#' },
     ],
   },
   {
     heading: 'Company',
     links: [
       { label: 'About Us', href: '#vision' },
-      { label: 'CA Partner Programme', href: '#contact' },
-      { label: 'Careers', href: '#' },
+      { label: 'How It Works', href: '#solution' },
       { label: 'Contact', href: '#contact' },
       { label: 'Privacy Policy', href: '#' },
       { label: 'Terms of Service', href: '#' },
@@ -82,14 +80,15 @@ export default function Footer() {
               fontWeight: 800, color: '#fff',
               lineHeight: 1.2, marginBottom: 8,
             }}>
-              Start your BRSR pilot today.
+              Get your GHG report done in 14 days.
             </h3>
             <p style={{
               fontSize: 16, color: 'rgba(255,255,255,0.85)',
               lineHeight: 1.6, margin: 0,
             }}>
-              ₹50K for a 4-week pilot. Adjustable against your annual subscription.
-              No lock-in. Full data ownership.
+              We collect your plant data, calculate process-specific emissions,
+              and deliver a CA-verified BRSR report. ₹50K pilot. ₹1.5L full service.
+              100% adjustable against annual subscription.
             </p>
           </div>
           <div style={{
@@ -107,9 +106,9 @@ export default function Footer() {
               onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.03)')}
               onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
             >
-              Book a Demo →
+              Book Free Assessment →
             </a>
-            <a href="#cbam" style={{
+            <a href="/sample-report.pdf" target="_blank" rel="noopener noreferrer" style={{
               display: 'inline-flex', alignItems: 'center', gap: 8,
               padding: '14px 28px', borderRadius: 10,
               background: 'rgba(255,255,255,0.15)', color: '#fff',
@@ -120,7 +119,7 @@ export default function Footer() {
               onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.25)')}
               onMouseLeave={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.15)')}
             >
-              Try CBAM Calculator
+              Download Sample Report
             </a>
           </div>
         </div>
@@ -340,7 +339,7 @@ export default function Footer() {
             fontSize: 12, color: 'rgba(255,255,255,0.25)',
             fontFamily: 'monospace',
           }}>
-            🇮🇳 Data hosted on AWS Mumbai · MeitY compliant
+            🇮🇳 Data hosted on AWS Mumbai · MeitY compliant · PI Insured · NDA on every engagement
           </div>
         </div>
       </div>

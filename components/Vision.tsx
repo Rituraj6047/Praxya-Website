@@ -2,38 +2,7 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 
-const roadmapItems = [
-  {
-    quarter: 'Q2 2026',
-    title: 'BRSR Core MVP Live',
-    detail: 'GHG Scope 1+2 · XBRL export · 10 Gujarat pilot clients',
-    status: 'active',
-  },
-  {
-    quarter: 'Q3 2026',
-    title: 'CBAM Module Launch',
-    detail: 'Embedded emissions per SKU · EU importer portal · HS code mapping',
-    status: 'upcoming',
-  },
-  {
-    quarter: 'Q4 2026',
-    title: 'MSME Supplier Cascade',
-    detail: 'Free supplier portal · Scope 3 Category 1 · Auto-questionnaires',
-    status: 'upcoming',
-  },
-  {
-    quarter: 'H1 2027',
-    title: 'AI + LCA Modules',
-    detail: 'Anomaly detection · ISO 14040 LCA · Decarbonisation roadmaps',
-    status: 'upcoming',
-  },
-  {
-    quarter: 'H2 2027',
-    title: 'Pan-India Expansion',
-    detail: 'Maharashtra + Tamil Nadu clusters · 100+ clients · Series A',
-    status: 'upcoming',
-  },
-];
+
 
 const founderCredentials = [
   { icon: '🏭', text: 'Chemical engineering domain expertise' },
@@ -102,16 +71,17 @@ export default function Vision() {
             letterSpacing: '-0.025em',
             lineHeight: 1.15,
           }}>
-            India&apos;s chemical industry deserves<br />
-            <span style={{ color: '#22C55E' }}>world-class sustainability infrastructure.</span>
+            Built by people who understand<br />
+            <span style={{ color: '#22C55E' }}>Indian chemical plants.</span>
           </h2>
           <p style={{
             fontSize: 18, color: '#6B7280', maxWidth: 640,
             margin: '0 auto', lineHeight: 1.7,
           }}>
-            160+ listed chemical manufacturers. Zero purpose-built compliance platforms.
-            We&apos;re here to change that — starting with the hardest problem: accurate,
-            auditable, chemical-process-specific emissions data.
+            We don't serve every industry. We serve Gujarat's specialty chemical cluster —
+            the companies where Scope 1 comes from reactions, not receipts. Where BRSR
+            accuracy depends on knowing the difference between a contact process and a
+            membrane cell.
           </p>
         </div>
 
@@ -192,8 +162,10 @@ export default function Vision() {
                 lineHeight: 1.6, marginBottom: 20,
                 color: 'rgba(255,255,255,0.95)',
               }}>
-                Every Indian chemical plant already measures what goes in and what comes out.
-                We&apos;re just making that data speak the language regulators and auditors need.
+                We've run the calculations. We know what an azo dye synthesis Scope 1
+                looks like, what a chlor-alkali membrane cell produces, and why the CEA
+                grid factor matters more than your consultant thinks. This isn't generic
+                ESG software. It's chemical engineering applied to compliance.
               </p>
               <div style={{
                 display: 'flex', alignItems: 'center', gap: 14,
@@ -237,69 +209,50 @@ export default function Vision() {
           </div>
         </div>
 
-        {/* ── product roadmap ── */}
-        <div>
-          <div style={{ textAlign: 'center', marginBottom: 40 }}>
-            <h3 style={{
-              fontSize: 26, fontWeight: 800, color: '#111827',
-              letterSpacing: '-0.01em',
-            }}>
-              Product Roadmap
-            </h3>
-            <p style={{ fontSize: 15, color: '#6B7280', marginTop: 8 }}>
-              Phased delivery. Compliance first. Advanced features after PMF.
-            </p>
-          </div>
-
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-            gap: 16,
+        <div style={{
+          background: '#fff',
+          border: '1px solid #E5E7EB',
+          borderRadius: 16,
+          padding: '32px 40px',
+          textAlign: 'center',
+          marginTop: 48,
+        }}>
+          <p style={{
+            fontSize: 18,
+            color: '#374151',
+            lineHeight: 1.75,
+            maxWidth: 640,
+            margin: '0 auto',
           }}>
-            {roadmapItems.map((item, i) => (
-              <div key={i} style={{
-                background: item.status === 'active' ? '#F0FDF4' : '#fff',
-                border: `1px solid ${item.status === 'active' ? '#BBF7D0' : '#E5E7EB'}`,
-                borderRadius: 14,
-                padding: '24px 20px',
-                position: 'relative',
-                transition: 'transform 0.2s',
-              }}
-                onMouseEnter={e => (e.currentTarget.style.transform = 'translateY(-3px)')}
-                onMouseLeave={e => (e.currentTarget.style.transform = 'translateY(0)')}
-              >
-                {item.status === 'active' && (
-                  <span style={{
-                    position: 'absolute', top: 12, right: 12,
-                    width: 8, height: 8, borderRadius: '50%',
-                    background: '#22C55E',
-                    boxShadow: '0 0 0 3px rgba(34,197,94,0.2)',
-                    animation: 'pulse 2s infinite',
-                  }} />
-                )}
-                <span style={{
-                  fontSize: 12, fontWeight: 700,
-                  color: item.status === 'active' ? '#16a34a' : '#9CA3AF',
-                  fontFamily: 'monospace',
-                  letterSpacing: '0.02em',
-                }}>
-                  {item.quarter}
-                </span>
-                <h4 style={{
-                  fontSize: 15, fontWeight: 700, color: '#111827',
-                  margin: '10px 0 6px', lineHeight: 1.3,
-                }}>
-                  {item.title}
-                </h4>
-                <p style={{
-                  fontSize: 13, color: '#6B7280',
-                  lineHeight: 1.5, margin: 0,
-                }}>
-                  {item.detail}
-                </p>
-              </div>
-            ))}
-          </div>
+            Currently serving the Gujarat GIDC chemical cluster —
+            Ankleshwar, Bharuch, Vapi, Vadodara.
+            Expanding to Maharashtra in late 2026.
+            <br /><br />
+            <span style={{ color: '#22C55E', fontWeight: 700 }}>
+              10 pilot client slots available for FY 2025–26 filing cycle.
+            </span>
+          </p>
+          <a
+            href="#contact"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 8,
+              marginTop: 24,
+              padding: '14px 32px',
+              borderRadius: 10,
+              background: '#111827',
+              color: '#fff',
+              fontWeight: 700,
+              fontSize: 15,
+              textDecoration: 'none',
+              transition: 'background 0.2s',
+            }}
+            onMouseEnter={e => (e.currentTarget.style.background = '#374151')}
+            onMouseLeave={e => (e.currentTarget.style.background = '#111827')}
+          >
+            Secure a Pilot Slot →
+          </a>
         </div>
 
       </div>

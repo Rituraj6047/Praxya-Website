@@ -1,15 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-
 export default function Hero() {
-  const [statusComplete, setStatusComplete] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setStatusComplete(true), 2500);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <section className="hero" id="hero">
       <div className="container hero-inner">
@@ -25,9 +16,9 @@ export default function Hero() {
 
           {/* Headline */}
           <h1 className="heading-hero hero-anim hero-anim-1" style={{ marginTop: '24px' }}>
-            Automate your BRSR.
+            Your BRSR GHG Report.
             <br />
-            Without the consultants.
+            Done For You. In <span style={{ color: 'var(--color-accent)' }}>14 Days.</span>
           </h1>
 
           {/* Sub */}
@@ -35,18 +26,18 @@ export default function Hero() {
             className="text-body-lg hero-anim hero-anim-2"
             style={{ marginTop: '20px', maxWidth: '520px' }}
           >
-            The only compliance platform built specifically for Indian chemical 
-            manufacturers. SEBI-ready reports with process-specific emission 
-            factors. Easy and precise.
+            We collect your plant data, calculate process-specific GHG 
+            emissions using IPCC 2006 chemical factors, and hand your CA an auditor-ready 
+            BRSR report. You review and approve. We do the rest.
           </p>
 
           {/* CTAs — Greenly style: green primary + outline secondary */}
           <div className="hero-ctas hero-anim hero-anim-3">
             <a href="#contact" className="btn-primary">
-              Get in Touch
+              Book a Free BRSR Assessment
             </a>
-            <a href="#solution" className="btn-outline">
-              See How It Works
+            <a href="/corpus/sample-report.pdf" target="_blank" rel="noopener noreferrer" className="btn-outline">
+              Download Sample Report
             </a>
           </div>
 
@@ -64,8 +55,8 @@ export default function Hero() {
               </div>
               <div className="hero-stat-divider" />
               <div className="hero-stat">
-                <span className="hero-stat-value">9</span>
-                <span className="hero-stat-label">BRSR KPIs<br />automated</span>
+                <span className="hero-stat-value">14</span>
+                <span className="hero-stat-label">day delivery<br />guaranteed</span>
               </div>
             </div>
           </div>
@@ -186,7 +177,7 @@ export default function Hero() {
                 {/* Status Bar */}
                 <div className="mockup-status">
                   <span>
-                    {statusComplete ? '✓ Report complete' : '⟳ Calculating...'}
+                    ✓ Report delivered — 12 days
                   </span>
                   <span>47 data points · XBRL ready · CA portal active</span>
                 </div>

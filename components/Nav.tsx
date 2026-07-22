@@ -3,10 +3,9 @@
 import { useState, useEffect, useCallback } from 'react';
 
 const NAV_LINKS = [
-  { label: 'Product', href: '#solution' },
-  { label: 'Capabilities', href: '#capabilities' },
+  { label: 'How It Works', href: '#solution' },
   { label: 'CBAM', href: '#cbam' },
-  { label: 'For CAs', href: '#capabilities' },
+  { label: 'For CAs', href: '#contact' },
   { label: 'Vision', href: '#vision' },
 ];
 
@@ -81,7 +80,7 @@ export default function Nav() {
               className="btn-secondary nav-cta"
               onClick={(e) => handleClick(e, '#contact')}
             >
-              Get in Touch
+              Book Free Assessment
             </a>
           </div>
 
@@ -135,7 +134,7 @@ export default function Nav() {
               style={{ width: '100%', textAlign: 'center' }}
               onClick={(e) => handleClick(e, '#contact')}
             >
-              Get in Touch
+              Book Free Assessment
             </a>
           </div>
         </div>

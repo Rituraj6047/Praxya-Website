@@ -5,7 +5,7 @@ import InsightsStrip from '@/components/InsightsStrip';
 import Problem from '@/components/Problem';
 import Solution from '@/components/Solution';
 import CbamBanner from '@/components/CbamBanner';
-import Capabilities from '@/components/Capabilities';
+import WhatWeDeliver from '@/components/WhatWeDeliver';
 import RegTimeline from '@/components/RegTimeline';
 import Vision from '@/components/Vision';
 import ContactForm from '@/components/ContactForm';
@@ -36,8 +36,8 @@ export default function Home() {
         {/* ── CBAM Banner: dark bg, urgency data, company table ── */}
         <CbamBanner />
 
-        {/* ── Capabilities: tabbed feature tiers ── */}
-        <Capabilities />
+        {/* ── What We Deliver: 3 service deliverables ── */}
+        <WhatWeDeliver />
 
         {/* ── Regulatory Timeline: vertical milestones ── */}
         <RegTimeline />
